@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>Control robot</title>
+  </head>
+  <body >
+      <style> 
+       body{
+            background-image:url(https://d310a9hpolx59w.cloudfront.net/product_photos/84747547/file_1e72ffaf80_original.png);
+            background-position: 50px 150px ;
+            background-repeat: no-repeat;
+            background-size: 900px;
+        }
+        .menu{
+            margin: 0.5em 0em 0em 3em;
+            
+        }
+        .mainMenu{
+            height: 250px;
+            width: 400px;
+            border-radius:40% ;
+            background-color: rgba(226, 226, 197, 0.959);
+            margin: 15em 0em 0em 47em;
+        }
+        .arm{
+            margin-bottom: 1em;
+        }
+        .header{
+            padding: 15px;
+            text-align: center;
+            background: #0e473e98;
+            color: white;
+            font-size: 30px;
+        }
+        button{
+            display: block;
+            font-size: 17px;
+            height: 50px;
+            width: 300px;
+            line-height: 60px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            overflow: hidden;
+            background-color:rgb(220, 250, 245);
+            border-style: dashed;
+            color:rgb(12, 154, 173);
+            font-weight: bold;
+            border-color: rgb(8, 100, 112);
+        }
+        h2{
+            font-size: 35px;
+            margin: 3em 0em 0em 3em;
+            font-family:cursive;
+            color:rgb(78, 90, 88);
+        }
+        p{ 
+            margin-left: 7.2em;
+            font-family:cursive;
+            color:rgba(66, 76, 83, 0.747);
+            }
+      </style>
+      <div class="header">
+        <h1>Robot Control Panel</h1>
+      </div>
+      <div class="mainMenu">
+        <h2>Main Menu</h2>
+        <p>Click One to Control</p>
+        <div class="menu">
+            <form action="roborArm.html">
+                <button class="arm" type="submit" class ="btn btn-primmary" name="arm">Arm Control Panel</button>
+            </form>
+            <form action="robotBase.html">
+                <button class="base"type="submit" class ="btn btn-primmary" name="base">Base Control Panel</button>
+            </form>
+        </div>
+      </div>
+  </body>
+</html>

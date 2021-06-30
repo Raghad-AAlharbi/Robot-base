@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+ <html> 
+   <head> 
+        <title> Control </title> 
+   </head> 
+   <body style="background-image: url(https://hdwallsource.com/img/2016/9/retro-3d-robot-wallpaper-49975-51660-hd-wallpapers.jpg) "> 
+        <style> 
+            .slider {
+                -webkit-appearance: none;
+                width: 50%;
+                height: 25px;
+                background: #83828269;
+                outline: none;
+                opacity: 0.7;
+                -webkit-transition: .2s;
+                transition: opacity .2s;
+            }
+            .slider:hover {
+                opacity: 1; 
+            }
+            .header{
+                padding: 15px;
+                text-align: center;
+                background: rgba(241, 233, 199, 0.651);
+                color: white;
+                font-size: 30px;
+            }
+            .slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 25px;
+                height: 25px;
+                background: rgba(70, 55, 35, 0.747);
+                cursor: pointer;
+            }
+            .slider::-moz-range-thumb {
+                width: 25px;
+                height: 25px;
+                background: rgb(131, 106, 70);
+                cursor: pointer;
+            }
+            h1{
+                font-family: serif;     
+                color:rgb(167, 145, 116);           
+            }
+            button{ 
+                font-size: 30px; 
+                background-color: rgb(131, 106, 70);
+                color: rgb(255, 255, 255); 
+                border-radius:10px;
+                margin-left:10em; 
+            }
+            .sliders{
+                margin-left:40em; 
+                margin-top: 5em; 
+                background-color: rgb(230, 212, 176) ;
+                height:550px;
+                width:500px;
+                border-radius: 50px;
+                text-align:center;
+                -webkit-appearance: none;
+            }
+            body { 
+                padding: 0; 
+                align-items: center; 
+                justify-content: center; position: static; 
+                font-family:'Times New Roman'; 
+                font-size: 30px; 
+                background-repeat: no-repeat;
+            }
+            h2{
+               font-size:20px;
+               font-family: Georgia ; 
+            }
+            .onoff{
+                position:absolute;
+                left:54em;
+                transform: translate(-50%,-70%);
+                text-align:center;
+            }
+            .switcher{
+                position:relative;
+                display:inline-block;
+                width:110px;
+                height:50px;
+                margin:10px;       
+            }
+            .sliderbottun{
+                cursor: pointer;
+                position: absolute;
+                top:0;
+                left:0;
+                right: 0;
+                bottom:0;
+                background-color: #ccc;
+                transition: .4s;
+                border-radius: 34px;
+            }
+            .switcher input{
+                display:none
+            }
+            .sliderbottun:before{
+                position: absolute ;
+                content: "";
+                height:40px;
+                width:50px;
+                left:5px;
+                bottom:5px;
+                background-color: white;
+                transition: 0.4s;
+                border-radius: 50px;
+            }
+            input:checked + .sliderbottun{
+                background-color: rgb(131, 106, 70);
+            }
+            input:checked + .sliderbottun:before{
+               transform: translateX(50px);      
+            }
+        </style>
+            <div class="header">
+                <h1>Robot Arm Control</h1>
+            </div>
+            <form action="ConnectFileArm.php" method ="post">
+             <div class="sliders">  <h1> Control Panel</h1>
+               <div class="slide" id="slide-1"> 
+                    <span id="slide1">45</span>
+                    <input type="range" min="1" max="90" value="45" class="slider" id="value1" name="slide1"> 
+                    <strong>Motor 1</strong> 
+                    <script> 
+                        var slider1 = document.getElementById("value1"); 
+                        var element1 = document.getElementById("slide1"); 
+                        element1.innerHTML = slider1.value; 
+                        slider1.oninput = function() { 
+                        element1.innerHTML = this.value; 
+                        } 
+                    </script> 
+               </div> 
+               <div class="slide" id="slide-2"> 
+                    <span id="slide2">45</span>
+                    <input type="range" min="1" max="90" value="45" class="slider" id="value2" name="slide2"> 
+                    <strong>Motor 2</strong> 
+                    <script> 
+                        var slider2 = document.getElementById("value2"); 
+                        var element2 = document.getElementById("slide2"); 
+                        element2.innerHTML = slider2.value; 
+                        slider2.oninput = function() { 
+                        element2.innerHTML = this.value; 
+                        } 
+                    </script> 
+                </div> 
+                <div class="slide" id="slide-3"> 
+                    <span id="slide3">45</span>
+                    <input type="range" min="1" max="90" value="45" class="slider" id="value3" name="slide3"> 
+                    <strong>Motor 3</strong> 
+                    <script> 
+                        var slider3 = document.getElementById("value3"); 
+                        var element3 = document.getElementById("slide3"); 
+                        element3.innerHTML = slider3.value; 
+                        slider3.oninput = function() { 
+                        element3.innerHTML = this.value; 
+                        } 
+                    </script> 
+                </div> 
+                <div class="slide" id="slide-4"> 
+                    <span id="slide4">45</span>
+                    <input type="range" min="1" max="90" value="45" class="slider" id="value4" name="slide4"> 
+                    <strong>Motor 4</strong> 
+                    <script> 
+                        var slider4 = document.getElementById("value4"); 
+                        var element4 = document.getElementById("slide4"); 
+                        element4.innerHTML = slider4.value; 
+                        slider4.oninput = function() { 
+                        element4.innerHTML = this.value; 
+                        } 
+                    </script> 
+                </div> 
+                <div class="slide" id="slide-5"> 
+                    <span id="slide5">45</span>
+                    <input type="range" min="1" max="90" value="45" class="slider" id="value5" name="slide5"> 
+                    <strong>Motor 5</strong> 
+                    <script> 
+                        var slider5 = document.getElementById("value5"); 
+                        var element5 = document.getElementById("slide5"); 
+                        element1.innerHTML = slider5.value; 
+                        slider5.oninput = function() { 
+                        element5.innerHTML = this.value; 
+                        } 
+                    </script> 
+                </div> 
+                <div class="slide" id="slide-6"> 
+                    <span id="slide6"></span>
+                    <input type="range" min="1" max="90" value="45" class="slider" id="value6" name="slide6"> 
+                    <strong>Motor 6</strong> 
+                    <script> 
+                        var slider6 = document.getElementById("value6"); 
+                        var element6 = document.getElementById("slide6"); 
+                        element6.innerHTML = slider6.value; 
+                        slider6.oninput = function() { 
+                        element6.innerHTML = this.value; 
+                        } 
+                    </script> 
+                </div> 
+                <br><br><button type="submit" onclick  class ="btn btn-primmary" >Save</button>
+                <br><br><h2>switch to Run</h2>
+                <div class = "onoff" name ="box">
+                    <label class = "switcher">
+                    <input type ="checkbox" name ="onoff" id ="ckeckValue" >
+                       <span class ="sliderbottun"></span>
+                    </label>
+                </div>
+             </div> 
+            </form>
+    </body> 
+ </html>

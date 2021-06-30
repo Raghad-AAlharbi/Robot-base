@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Control </title>
+    </head>
+    <body STYLE="background-image: URL(https://i.pinimg.com/originals/78/54/dc/7854dccccc6f6abb22aea0fc7426df42.jpg)">
+        <style>
+            body{
+                background-repeat: no-repeat;
+            }
+            .header{
+                padding: 15px;
+                background: #0e473e33;
+                color: rgb(63, 63, 63);
+                font-size: 30px;
+            }
+            h1{
+                text-align: center;
+            }
+            .Right,.Left,.Backward,.Forward,.Stop{ 
+                background-color: rgba(81, 146, 64, 0.555);
+                color: rgb(255, 255, 255); 
+                border-radius:30px;
+                border-top: rgba(81, 146, 64, 0.555);
+                border-right: rgba(59, 109, 47, 0.753);
+                border-bottom: rgba(59, 109, 47, 0.753);
+                border-left: rgba(59, 109, 47, 0.753);
+                padding-top:0.3em;
+                padding-bottom:0.3em;
+                margin-top: 1.3em;
+                position: relative;
+                height: 60px;
+                width: 200px;
+                line-height: 60px;
+                border-radius: 30px;
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: 500;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                overflow: hidden;
+                display: block;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            }
+            .btns{
+                margin-left: 35em;
+                height: 510px ;
+                width: 700px ;   
+            }
+            h2{
+                font-size:30px;
+            }
+            .text{
+                margin: 8em 0em 3em 30em;
+                font-family: monospace;
+                color: rgb(69, 94, 72);
+            }
+
+        </style>
+        <form action="ConnectFileBase.php" method ="post">
+            <div class="header">
+                <h1>Robot Base Control</h1>
+            </div>
+            <div class="text"><h2>Please choose one to move the robot</h2></div>
+            <div class="btns">     
+                <button class= "Right" type="button" onclick="alert('Moved Right Successfully')" btn btn-primmary" name="Right">Right
+                    <input
+                    type="radio"
+                    name="Right"
+                    value="r"
+                    id="Right"
+                    />
+                </button>
+                <button class= "Left" type="button"  onclick="alert('Moved Left Successfully')" btn btn-primmary" name="Left">Left
+                    <input
+                    type="radio"
+                    name="Left"
+                    value="l"
+                    id="Left"
+                    />
+                </button>
+                <button class= "Forward" type="button" onclick="alert('Moved Forword Successfully')" class ="btn btn-primmary" name="Forward">Forward
+                    <input
+                    type="radio"
+                    name="Forward"
+                    value="f"
+                    id="Forward"
+                  />
+                </button>
+                <button class= "Backward" type="button" onclick="alert('Moved Backword Successfully')" class ="btn btn-primmary" name="Backward">Backward
+                    <input
+                    type="radio"
+                    name="Backward"
+                    value="b"
+                    id="Backward"
+                    />
+                </button>
+                <button class= "Stop" type="button" onclick="alert('Stop Successfully')" class ="btn btn-primmary" name="Stop">Stop
+                    <input
+                    type="radio"
+                    name="Stop"
+                    value="s"
+                    id="Stop"
+                    />
+                </button>
+            </div>
+        </form>
+    </body>
+</html>
